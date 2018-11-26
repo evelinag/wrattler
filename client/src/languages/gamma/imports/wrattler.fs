@@ -5,11 +5,16 @@ open Fable.Core
 open Fable.Import.JS
 open Wrattler.Html
 
-type [<AllowNullLiteral>] Range =
-    abstract block: string with get, set
-    abstract start: float with get, set
-    abstract ``end``: float with get, set
+type Range =
+    { block: string
+      start: float 
+      ``end``: float }
 
+type Error =
+    { number : int
+      message : string
+      range : Range }
+    
 type [<AllowNullLiteral>] Syntax<'T> =
     abstract syntax: 'T with get, set
     abstract range: Range with get, set

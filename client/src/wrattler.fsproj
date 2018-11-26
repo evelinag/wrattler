@@ -7,6 +7,8 @@
     <Compile Include="languages/gamma/imports/wrattler.fs" />
     <Compile Include="languages/gamma/imports/babel.fs" />
     <Compile Include="languages/gamma/ast.fs" />
+    <Compile Include="languages/gamma/tokenizer.fs" />
+    <Compile Include="languages/gamma/parser.fs" />
     <Compile Include="languages/gamma/plugin.fs" />
   </ItemGroup>
   <Import Project="..\.paket\Paket.Restore.targets" />

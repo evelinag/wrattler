@@ -16,6 +16,12 @@ interface Range {
   end: number
 }
 
+interface Error { 
+  number : number
+  message : string
+  range : Range 
+}
+
 interface Type {
 
 }
