@@ -104,8 +104,6 @@ export class externalLanguagePlugin implements Langs.LanguagePlugin {
         var results : Values.ExportsValue = { kind:"exports", exports:{} }
         
         if (response.data.output.toString().length > 0){
-          console.log(response.data.output)
-          console.log(response.data)
           let printouts : Values.Printout = { kind:"printout", data:response.data.output.toString() }
           results.exports['console'] = printouts
         }
@@ -142,7 +140,6 @@ export class externalLanguagePlugin implements Langs.LanguagePlugin {
   
     switch(externalNode.kind) {
       case 'code': 
-      console.log(externalNode)
         let importedFrames : { name:string, url:string }[] = [];
         for (var ant of externalNode.antecedents) {
           let imported = <Graph.ExportNode>ant
